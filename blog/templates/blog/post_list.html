@@ -6,17 +6,14 @@
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
+        
+        {% for post in posts %}
+          <div>
+        	  <p>published: {{ post.published_date }}</p>
+        	  <h2><a href="">{{ post.title }}</a></h2>
+              <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Mon premier post</a></h2>
-            <p>Une première journée avec les DjangoGirls à thecamp ! C'est vraiment trop chouette de se motiver toutes ensemble. En plus on a un super coach ! </p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Mon second post</a></h2>
-            <p> Incroyable je vais peut-être réussir à publier mon premier site web homemade ! </p>
-        </div>
     </body>
 </html>
